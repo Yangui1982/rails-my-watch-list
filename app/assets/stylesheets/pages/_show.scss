@@ -1,0 +1,59 @@
+@import "home";
+@import "index";
+
+body {
+  background-color: white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-trip{
+  width: 540px;
+  height: 580px;
+  background-color: whitesmoke;
+  margin-right: 44px;
+}
+
+.movie-info{
+  color: grey;
+  border-bottom: 1px solid grey;
+  text-align: justify;
+  padding-right: 5px;
+}
+
+.add {
+  margin-left: 195px;
+  margin-top: 30px;
+  color: whitesmoke;
+  border-radius: 50px;
+  background-color: #E45858;
+  text-align: center;
+  height: 40px;
+  width: 200px;
+  padding-top: 8px;
+
+}
+
+.comment {
+  color: black;
+}
+
+.card-trip-infos a {
+  padding-left: 500px;
+  color: black;
+
+}
+
+h6 {
+  padding-left: 10px;
+}

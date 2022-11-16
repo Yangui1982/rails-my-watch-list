@@ -1,0 +1,29 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://fr.web.img3.acsta.net/newsv7/21/12/27/19/55/3679527.jpg);">
+  <div class="container">
+    <h1>Do your own Movies Lists!</h1>
+    <p>Categorize your Movies</p>
+  </div>
+</div>
+
+<div class="container list">
+  <div class="container">
+    <h1>My Lists</h1>
+  </div>
+  <br>
+    <ul>
+      <div class="lists">
+        <% @lists.each do |list| %>
+          <li>
+            <div class="card-category card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : asset_path('list_background.jpg') %>)">
+              <h2 class="categorie"><%= link_to list.name, list %></h2>
+              <%= link_to list_path(list), class: 'trash',
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } do%>
+                    <i class="fa-regular fa-trash-can"></i>
+                    <% end %>
+            </div>
+          </li>
+        <% end  %>
+      </div>
+    </ul>
+</div>
