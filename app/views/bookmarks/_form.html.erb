@@ -1,0 +1,14 @@
+<br>
+<br>
+<div class="container new">
+  <div class="container form" data-controller="select2">
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+      <%= f.input :comment %>
+      <%= f.input :movie_id, collection: Movie.all, input_html: { class: 'select2' } %>
+      <%= f.submit 'Create a Bookmark', class:'addlink' %>
+    <% end %>
+  </div>
+</div>
+<div class="back">
+  <%= link_to 'Back', list_path(@list), class: 'backlink'%>
+</div>

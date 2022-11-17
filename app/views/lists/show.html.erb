@@ -34,9 +34,8 @@
                 <div class="comment">
                   <h6><i class="fa-solid fa-quote-left"> </i><%= bookmark.comment %></h6>
                 </div>
-                <%= link_to bookmark_path(bookmark),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } do%>
+                <%= link_to bookmark_path,
+                  data: {turbo_method: :delete, turbo_confirm: "Are you sure?" } do%>
                   <i class="fa-regular fa-trash-can"></i>
                   <% end %>
               </div>
@@ -83,5 +82,3 @@
     </div>
   </div>
 </div>
-
-<%= render "bookmarks/new", list: @list %>
