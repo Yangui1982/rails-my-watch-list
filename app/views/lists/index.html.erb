@@ -16,7 +16,7 @@
           <li>
             <div class="card-category card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('list_background.jpg') %>)">
               <h2 class="categorie"><%= link_to list.name, list %></h2>
-              <%= link_to list_path(@list), class: 'trash',
+              <%= link_to list_path(list), class: 'trash',
                     data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do%>
                     <i class="fa-regular fa-trash-can"></i>
                     <% end %>
